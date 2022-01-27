@@ -2,13 +2,19 @@ package com.example.rotationchallenge
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Set a custom toolbar
+        setSupportActionBar(findViewById(R.id.toolbar_custom))
 
         // Verifies the state of textView to save information in case the screen rotates
         val textCounter = savedInstanceState?.getString("KEY_TEXT") ?: "0"

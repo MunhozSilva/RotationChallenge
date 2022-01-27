@@ -6,6 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/toolbar_title"
+            android:layout_marginRight="8dp"
+            android:textColor="@android:color/white" />
+
+    </androidx.appcompat.widget.Toolbar>
+
     <Button
         android:id="@+id/plus_one_button"
         android:layout_width="wrap_content"
@@ -25,4 +47,5 @@
         app:layout_constraintEnd_toEndOf="@+id/plus_one_button"
         app:layout_constraintStart_toStartOf="@+id/plus_one_button"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

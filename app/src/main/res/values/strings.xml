@@ -3,4 +3,5 @@
     <string name="plus_one">+1</string>
     <string name="textview">0</string>
     <string name="toolbar_title">Rotation Exercise :)</string>
+    <string name="menu_action_settings">About this app</string>
 </resources>

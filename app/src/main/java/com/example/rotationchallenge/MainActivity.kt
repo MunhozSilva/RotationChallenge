@@ -43,4 +43,23 @@ class MainActivity : AppCompatActivity() {
         val textViewText = findViewById<TextView>(R.id.textView).text.toString()
         outState.putString("KEY_TEXT", textViewText)
     }
+
+
+    // Inflate the menu on toolbar
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    // This function defines the actions on menu
+    override fun onOptionsItemSelected(item: MenuItem): Boolean =
+        when (item.itemId) {
+            R.id.action_settings -> {
+                Toast.makeText(this, "It's just a practice app", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
+        }
 }
